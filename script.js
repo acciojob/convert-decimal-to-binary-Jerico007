@@ -10,7 +10,7 @@ function decimalToBinary(num) {
 	}
 
 	res = Math.floor(res/10);
-	return res;
+	return res.toString();
 }
 
 const num = parseInt(prompt("Enter a number."));
