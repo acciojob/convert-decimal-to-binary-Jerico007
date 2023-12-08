@@ -1,16 +1,17 @@
 function decimalToBinary(num) {
   // your code here
-	if(num === 1)
-	{
-		return 1;
+	let res = 0;
+	let p =1;
+	while (num > 0) {
+		let rem = num%2;
+		res = res + Math.pow(10,p) * rem;
+		p ++;
+		num = Math.floor(num/2);
 	}
-	if(num === 2)
-	{
-		return 10;
-	}
-	while (num > 1) {
-		
-	}
+
+	res = Math.floor(res/10);
+	return res;
 }
-// const num = parseInt(prompt("Enter a number."));
+
+const num = parseInt(prompt("Enter a number."));
 alert(decimalToBinary(num));
